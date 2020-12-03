@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>View province: <span th:text="${province.name}"></span></h1>
+<a href="/province">Province list</a>
+<table border="1">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <th:block th:each="customer : ${customers}">
+        <tr>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.lastName}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
